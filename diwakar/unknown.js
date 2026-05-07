@@ -1,6 +1,4 @@
-"use strict";
 //! Unknown is a type-safe alternative to any
-Object.defineProperty(exports, "__esModule", { value: true });
 //! This datatype is similar to the "any" datatype, the difference is that when we try to use any method this datatype, we have to manually do the type checking
 let a;
 a = "Hello";
@@ -27,3 +25,4 @@ let b = "hello";
 if (typeof b == "string") {
     b.toUpperCase();
 }
+export {};

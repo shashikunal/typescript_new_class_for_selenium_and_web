@@ -7,7 +7,7 @@
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "nodenext", //what type of module you going use es6 || commonjs
+    "module": "es2015", //what type of module you going use es6 || commonjs
     "target": "esnext",
     "types": [],
     // For nodejs:
@@ -40,5 +40,6 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
-  }
+  },
+  "include": ["src/**/*"]
 }

@@ -244,33 +244,181 @@
 
 // Array of Nested Objects
 
-let userProfile:{
-    name:string;
-    address:{
-        city:string;
-        state:string;
-        pincode:number
-    }[]
-}[];
+// let userProfile:{
+//     name:string;
+//     address:{
+//         city:string;
+//         state:string;
+//         pincode:number
+//     }[]
+// }[];
 
-userProfile = [
-    {
-        name:'shashi',
-        address:[
-            {
-            city:'banaglore',
-            state:'karanataka',
-            pincode:111111
-        },
+// userProfile = [
+//     {
+//         name:'shashi',
+//         address:[
+//             {
+//             city:'banaglore',
+//             state:'karanataka',
+//             pincode:111111
+//         },
     
-        {
-           city:'mysore',
-            state:'karanataka',
-            pincode:22222 
-        }
-    ]
+//         {
+//            city:'mysore',
+//             state:'karanataka',
+//             pincode:22222 
+//         }
+//     ]
         
-    }
-];
+//     }
+// ];
 
-console.log(userProfile[0]?.address[0]?.city);
+// console.log(userProfile[0]?.address[0]?.city);
+
+
+// // type alias , function 
+
+// type str = string;
+
+//primitive way apply type aliases
+
+// let MyName:str = "shashi";
+// let company:str = "qspiders";
+
+// console.log(MyName);
+// console.log(company);
+
+
+//Object type Aliases(Object reference way)
+
+// type USERPROFILE = {
+//     username:string;
+//     pancard:number;
+//     address:string;
+// }
+
+
+// let userProfile:USERPROFILE = {
+//     username:"vinay",
+//     pancard:1000000,
+//     address:"sksksssss"
+// }
+
+// console.log(userProfile)
+
+
+// create one Employee Object with type Aliases
+//emp_id
+//emp_address
+//emp_exp
+//skills
+//city
+//education
+//salary
+
+
+// type SKILLS = [
+
+// ];
+// type EDUCATIONS = {}
+// type EXP = {}
+
+
+// type USER = {
+//     username:string;
+//     photo:string;
+//     gender:string;
+//     IsActive?:boolean;
+//    };
+
+
+// type ADDRESS = {
+//         streetName:string,
+//         city:string;
+//         pincode:number;
+
+//     }
+// type SKILLS = {
+//     frontend:string[],
+//     backend:string[]
+// }
+
+// // type EMP_OBJ = USER & ADDRESS //intersection
+
+// type EMPOBJ = {
+//     user:USER,
+//     temp_address:ADDRESS
+//     skills:SKILLS,
+//     perm_address:ADDRESS
+// }
+
+
+// let emp_obj :EMPOBJ = {
+//     user:{username:'shashi',photo:"https://unsplash.com/s/photos/fake-man",gender:'male'  },
+//   temp_address:{streetName:"4th cross" , city:'mysore',pincode:11111},
+//   skills:{frontend:["reactjs" , "js"],backend:["java" , "spring"] },
+//   perm_address:{streetName:"5th cross" , city:'mandya',pincode:33333},
+
+// }
+
+// console.log(emp_obj)
+
+
+// type username = string;
+// type age = number;
+// type company = string;
+
+// type profile = {
+//     username:username;
+//     age:age;
+//     company:company
+// }
+
+// type empProfile = {
+//     emp_name:username,
+//     emp_age: age;
+//     emp_company:company
+// }
+
+// let userProfile:profile = {
+//     username:"vinu",
+//     age:30,
+//     company:"ty"
+// }
+
+// let emp_profile:empProfile = {
+//     emp_name:"manu",
+//     emp_age: 20,
+//     emp_company:"qspiders"
+// }
+
+// console.log(userProfile);
+// console.log(emp_profile)
+
+// ARRAY Alias
+
+// type TASKLIST  = {title:string; IsCompleted:boolean}[];
+
+// let TaskList:TASKLIST = [
+//     {
+//         title:"selenium trainer",
+//         IsCompleted:true,
+       
+//     }
+// ];
+
+// console.log(TaskList)
+
+// functional ALIAS
+
+// i need only console or  not return data (void)
+
+
+type CALWITHOUTRETURN = (val:string) => []; //no return value
+type Obj= () => object;
+type str = () => string;
+
+
+
+
+

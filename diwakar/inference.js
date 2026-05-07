@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 let a = 100;
 // a = "Hello";
 let b = "hello world";
@@ -25,4 +23,5 @@ let hobbies = ["str"];
 // hobbies[1] = true
 //string[]
 let xyx = ["a", 1];
+export {};
 //! (string | number)[]

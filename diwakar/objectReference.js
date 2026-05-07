@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 let a = {
     name: "Qspiders",
     address: "Bangalore",
@@ -38,3 +36,4 @@ let no = 100;
 // ! In typescript, const variables are said to have literal data type. That means whatever, is the value assigned to the variable, is taken as the data type of the variable
 const p = "hello world";
 const q = 200;
+export {};

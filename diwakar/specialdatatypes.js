@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 let a;
 a = ["hello"];
 a = { name: "qspider" };
@@ -35,3 +33,4 @@ greeting = 500;
 greeting = { name: "Jspider" };
 //! developer A
 greeting.toUpperCase();
+export {};

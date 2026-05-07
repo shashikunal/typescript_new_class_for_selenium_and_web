@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 console.log("start");
 function greet() {
     //   for (let i = 0; i < 1000000000; i++) {} //! time consuming loop
@@ -20,3 +18,4 @@ function errorHandler() {
     // return "hello" //! unreachable code,the execution was stopped due to Error
 }
 console.log("After function");
+export {};

@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 let a = "Hello World";
 a = "Bye world";
 // a = 100
@@ -27,6 +25,7 @@ console.log(str, "str");
 let val = null;
 val = "hi";
 console.log(val);
+export {};
 //! convention to use type annotation and type inference
 /**
  * While using variables, let typescript do type inference
