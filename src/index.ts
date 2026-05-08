@@ -414,11 +414,194 @@
 // i need only console or  not return data (void)
 
 
-type CALWITHOUTRETURN = (val:string) => []; //no return value
-type Obj= () => object;
-type str = () => string;
+// type CALWITHOUTRETURN = (val:string) => []; //no return value
+// type Obj= () => object;
+// type str = () => string;
 
 
+//Type Aliases
+// type USER = {
+//     username:string;
+//     age : number
+// }
 
 
+// INTERFACE
 
+// interface USER {
+//     username:string;
+//     age:number
+// }
+
+// let user:USER = {
+//     username:"shashu",
+//     age:30,
+    
+// }
+
+// console.log(user)
+
+
+// interface does not create object
+
+//it defines only rules or structure
+
+
+// create one Emp object and share 
+
+// interface UserProfile {
+//     username:string;
+//     profileDetails():void;
+// }
+
+// let userDATA:UserProfile = {
+//     username:"manu",
+//     profileDetails(){
+//         console.log(this.username)
+//     }
+// }
+
+// console.log(userDATA.profileDetails())
+
+//pattern
+// interface ADD {
+//     (firstNumber:number , secondNumber:number):number
+// }
+
+// let add:ADD =(firstNumber , secondNumber)=>{
+//     return firstNumber + secondNumber
+// }
+
+
+// console.log(add(2 , 2))
+
+// INTERFACE WITH FUNCTION
+
+// interface ADD {
+//     (firstNumber:number , secondNumber:number):number //function type in interface property
+// }
+
+// // interface ADD {
+// //     add():number
+// // }
+
+// let addition:ADD = (firstNumber , secondNumber) =>{
+//    return firstNumber + secondNumber
+// }
+
+// console.log(addition(10 , 10))
+
+// interface with array
+
+// interface USERS {
+//     profiles:string[];
+// }
+
+// let Users:USERS = {
+//     profiles:["shashi"]
+// }
+
+// interface USERS {
+//     [name:number]:string[]
+// }
+
+// let users:USERS = [["shashi"] , ["manu"]]
+
+// interface USERS {
+//     [index:number]:string
+// }
+
+// let users:USERS = ["shashi" ]
+
+
+// type USER = {};
+// type ADDRESS = {};
+// type PAYMENT = {};
+
+// type profile = {
+//     user:USER;
+//     address:ADDRESS;
+//     payment : PAYMENT
+// }
+
+// interface USER {
+//     username:string
+// }
+
+// interface ADDRESS {
+//    readonly street_name:string;
+   
+// }
+
+// interface PAYMENT {
+//     payment_mode?:string
+// }
+
+// interface PROFILE extends USER , ADDRESS , PAYMENT {}
+// // type PROFILE2 = USER & ADDRESS & PAYMENT;
+
+// let profile:PROFILE = {
+//     username:"shashi",
+//     street_name:"jaya nagar",
+    
+// }
+
+// let profile2:PROFILE2 = {
+//     username:"shashi",
+//     street_name:"jaya nagar",
+//     payment_mode:'online'
+// }
+
+// console.log(profile.street_name)
+
+
+// type USER = {
+//     username:string
+// }
+
+// type USER = {
+//     age:number
+// }
+
+// interface USER {
+//     username:string
+// }
+
+// interface USER {
+//     age : number
+// }
+
+// interface USER {
+//     address:object
+// }
+
+
+// let user:USER = {
+//     username:'manu',
+//     age:20,
+//     address:{
+//         name:'jayanagar'
+//     }
+// }
+
+
+interface ADDRESS {
+    city:string;
+    pincode :number
+}
+
+interface USER {
+    name:string,
+    address:ADDRESS
+}
+
+
+let user:USER = {
+    name:'dixith',
+    address:{
+        city:'mysore',
+        pincode:111
+    }
+}
+
+console.log(user)
