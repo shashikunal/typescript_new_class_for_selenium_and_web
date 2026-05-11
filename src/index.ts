@@ -585,23 +585,172 @@
 // }
 
 
-interface ADDRESS {
-    city:string;
-    pincode :number
+// interface ADDRESS {
+//     city:string;
+//     pincode :number
+// }
+
+// interface USER {
+//     name:string,
+//     address:ADDRESS
+// }
+
+
+// let user:USER = {
+//     name:'dixith',
+//     address:{
+//         city:'mysore',
+//         pincode:111
+//     }
+// }
+
+// console.log(user)
+
+
+//*-----------------------------TUPLE -------------------------------*/
+
+// let TupleExample:[string , number] = ["shashi" , 1000]; //this tuple is only for compile time only
+
+// console.log(typeof TupleExample);
+// console.log(Array.isArray(TupleExample)); //true
+// console.log(TupleExample);
+
+// let TupleWith10Data:[string , number , boolean , null , undefined , object ] =
+//  ["shahsi" , 100 , true , null  , undefined , {} ]
+
+
+// access tuple Values
+
+// Is Tuple is Mutable or not?
+
+
+
+// let URL:readonly [string ,  number] = ["https://api.github.com/" , 200]; //tuple always should match the order
+
+// console.log(URL);
+
+// URL[0] = "https://www.google.com";
+// console.log(URL);
+
+// //if it is readonly flag that means no updates allowed
+
+
+// nested tuple 
+
+// let Users:[string , [string , number , [boolean]]] = ["shashi"  , ["manu" , 100  , [true]]];
+
+// console.log(Users[0]);
+// console.log(Users[1][0]);
+
+// console.log(Users[1][2]);
+// console.log(Users[1][0][1]);
+
+//optional tuple values
+// let Users:[string , boolean?] = ["shashi"];
+
+// NAMED TUPLE
+//Named Tuples: Since TypeScript 4.0, you can add labels to elements to 
+// make your code more readable (e.g., [name: string, age: number]).
+
+// let URL:[url:string , statusCode:number ,method:string] = ["https://www.google.com"  , 200  , "GET"];
+
+// console.log(URL)
+
+
+// Tuple with Array
+
+// Array is containing tuples
+
+// let LanguagesAndDuration:[string , number][] = [["java" , 10] , ["js" , 20] , ["python" , 40]];
+
+// console.log(LanguagesAndDuration)
+
+// tuple with type alias
+
+// type ProfileData = [username:string , [address:string , pincode:number]];
+
+// let User1:ProfileData = ["vinay" , ["address" , 20000]];
+
+// console.log(User1)
+
+
+// tuple with interface
+
+// interface PROFILE {
+//     [index:number]:[string , string]
+// }
+
+// let user2:PROFILE = ["vinay" , "manu"]
+
+
+// interface with extends keyword with tuple
+// tuple pattern
+// interface User {
+//     0:string;
+//     1 : number
+// }
+
+
+interface Profile extends Array<string| number> {
+    0 :string;
+    1:number
+
 }
 
-interface USER {
-    name:string,
-    address:ADDRESS
-}
+let profile:Profile = ["shashi" ,1];
+profile.push("manu")
+
+//tuple with function parameter
+// function Users(profile:[string , number]) {
+//     return profile
+// };
+
+// let user1 = Users(["shashi" , 19000])
+let arr:(string| number)[] = [ 2000 , "anuWithArray"  , "shashi"]; //no fixed size , no order
+console.log(arr)
 
 
-let user:USER = {
-    name:'dixith',
-    address:{
-        city:'mysore',
-        pincode:111
-    }
-}
+//tuple is flexible in few cases like array methods
+let tuple:[string , number] = ["anuithTuple" , 1000 ]; //fixed size order is important
+console.log(tuple);
 
-console.log(user)
+tuple.push("shashi");
+
+console.log(tuple.length);
+
+// order with methods
+
+tuple.unshift(10000000);
+console.log(tuple)
+
+//tuple is extending array only 
+
+
+
+let test:[string] = ["shashi"]
+
+test.push("manu");
+
+// // inference
+// let data = ["shashi" , 10 , 1000]; //union array
+
+// let data2:(string | number)[] = ["shashi" , 1000 , 1000];
+
+
+// let data1 = ["shashi" , 10000] as const; //force tuple
+
+// let data3:[string , number] = ["shashi" , 100000];
+
+// size is matter use tuple 
+// order is matter use tuple 
+
+
+// RGB 
+// cordinates => latitude and longitude
+
+let RGBA:[number , number , number , number] = [255 , 255 , 255 , 0.5];
+
+let coords:[lat:string , long:string] = ["12.2958° N" , "76.6394° E"];
+
+console.log(RGBA);
+console.log(coords)
