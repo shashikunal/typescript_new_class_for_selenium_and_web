@@ -691,14 +691,14 @@
 // }
 
 
-interface Profile extends Array<string| number> {
-    0 :string;
-    1:number
+// interface Profile extends Array<string| number> {
+//     0 :string;
+//     1:number
 
-}
+// }
 
-let profile:Profile = ["shashi" ,1];
-profile.push("manu")
+// let profile:Profile = ["shashi" ,1];
+// profile.push("manu")
 
 //tuple with function parameter
 // function Users(profile:[string , number]) {
@@ -706,30 +706,30 @@ profile.push("manu")
 // };
 
 // let user1 = Users(["shashi" , 19000])
-let arr:(string| number)[] = [ 2000 , "anuWithArray"  , "shashi"]; //no fixed size , no order
-console.log(arr)
+// let arr:(string| number)[] = [ 2000 , "anuWithArray"  , "shashi"]; //no fixed size , no order
+// console.log(arr)
 
 
-//tuple is flexible in few cases like array methods
-let tuple:[string , number] = ["anuithTuple" , 1000 ]; //fixed size order is important
-console.log(tuple);
+// //tuple is flexible in few cases like array methods
+// let tuple:[string , number] = ["anuithTuple" , 1000 ]; //fixed size order is important
+// console.log(tuple);
 
-tuple.push("shashi");
+// tuple.push("shashi");
 
-console.log(tuple.length);
+// console.log(tuple.length);
 
-// order with methods
+// // order with methods
 
-tuple.unshift(10000000);
-console.log(tuple)
+// tuple.unshift(10000000);
+// console.log(tuple)
 
-//tuple is extending array only 
+// //tuple is extending array only 
 
 
 
-let test:[string] = ["shashi"]
+// let test:[string] = ["shashi"]
 
-test.push("manu");
+// test.push("manu");
 
 // // inference
 // let data = ["shashi" , 10 , 1000]; //union array
@@ -748,9 +748,143 @@ test.push("manu");
 // RGB 
 // cordinates => latitude and longitude
 
-let RGBA:[number , number , number , number] = [255 , 255 , 255 , 0.5];
+// let RGBA:[number , number , number , number] = [255 , 255 , 255 , 0.5];
 
-let coords:[lat:string , long:string] = ["12.2958° N" , "76.6394° E"];
+// let coords:[lat:string , long:string] = ["12.2958° N" , "76.6394° E"];
 
-console.log(RGBA);
-console.log(coords)
+// console.log(RGBA);
+// console.log(coords)
+
+// order is important use tuple
+// fixed size value use tuple
+
+// let x:[string] = ["shashi"]; //fixed sized
+// let y:[number] = [10];
+
+// // example two values in an array
+
+// let twoValues:[number , string] = [10 , "hello"];
+
+// UNION type
+
+
+// let x:string; //undefined
+// x = "shashi";
+// x = 10;
+
+
+// console.log(x)
+
+// Union with Array
+
+// let a:string|number = "shashi"
+
+// let arr:string[] | number[];
+
+// // arr = [1 ,2 , 4]
+// arr = [10]; //string values with array
+// arr = ["shashi"]
+
+
+//need to store multiple array of values go with tuple
+// either any one type in the value might what ever data type like , primitive or object 
+// union
+
+// let x:string | number = "shashi";
+
+// let x1:(string | number)[] = [1000 , "shashi" , 10000 , "11111"]; //js flow
+
+// Object with union
+
+// type USERPROFILE = string | number
+
+// let user = {
+//     username:"shashi",
+//     userProfile:USERPROFILE
+// }
+
+
+// object literal :
+// type annotation also use :
+
+// let username:string | number; //union
+// let age:number | string;
+
+// // i need to use varaibale as object property key
+// let userProfile = {
+//     //inside you can create object properties separated by :
+//     [username]:"manu",
+//     [age]:10000
+// }
+
+
+// Unions , tuples , array , objects , type alias , interface
+
+// let x : string | number = "shashi";
+// let arr:string[] | number[] = ["shashi"];
+
+// let obj:{name:string} | {age:number} = {name:"shashi" , age:1000};
+
+
+// // union with function parameter
+
+// let UserData = (name:string| number)=>{
+//     return name;
+// }
+
+// console.log(UserData("shashi"));
+// console.log(UserData(1000));
+// console.log(UserData(true))
+
+
+
+// try with union and tuple type
+// let data:[string|number, boolean|string] = ["suman" ,   true];
+
+// //try with union and type alias;
+
+// type EMPID = string | number;
+// const emp_id:EMPID = 123
+
+
+// let value:string | number = 1000;
+
+// if(typeof value === "string"){
+//  console.log(value.toUpperCase());
+
+// }else {
+//     console.log(value.toFixed(4)); //number method 
+// }
+
+
+
+// type narrowing
+
+
+// |
+// [string , number]
+// type x ={}
+// interface {}
+
+
+let x = "100";
+let y = 100;
+
+if(typeof(x) == typeof(y)){
+   console.log(typeof x);
+   console.log(typeof y)
+}
+
+
+// when ever using object , interface ,  you should avoid unions
+
+let demo = (x:string | number) =>{
+    if(typeof x === "string"){
+        console.log(x.toUpperCase())
+    }else{
+        console.log(x.toFixed(1))
+    }
+}
+
+let demo1 = demo("shashi"); //SHASHI
+let demo2 = demo(1000); //1000.0
