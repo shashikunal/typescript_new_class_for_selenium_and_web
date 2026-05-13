@@ -3,9 +3,8 @@
 
 //let langauges = ["java" , 19 , true , null , undefined] // Array literal by default that any type
 
-
-// same type of values like only string 
-// how to store same type of data inside array 
+// same type of values like only string
+// how to store same type of data inside array
 
 // let languages:string[] = ["java" , "js" , "nodejs" , "python"];
 // let courseDuration:number[] = [10 , 20  , 39.1 , 199 , "shashi"];
@@ -15,7 +14,6 @@
 // type[]
 
 // let lang:string[] = ["java" , "selenium"];
-
 
 // // Array<type>
 
@@ -36,17 +34,14 @@
 // //remove element from the array
 // // remove last element in th array
 
-// usersInfo.pop(); //Removes the last element from an array and returns it. 
+// usersInfo.pop(); //Removes the last element from an array and returns it.
 // // If the array is empty, undefined is returned and the array is not modified.
 // usersInfo.shift(); //Removes the first element from an array and returns it.
 //  If the array is empty, undefined is returned and the array is not modified.
 
 // Iterating with loop
 
-
-
-
-//for loop 
+//for loop
 // for(let i=0; i<languages.length;i++){
 //     console.log(languages[i])
 // }
@@ -72,9 +67,7 @@
 //     console.log(val);
 // }); //forEach is expecting  function
 
-
 // Multidimensional arrays
-
 
 //syntax
 // let arrays:type[][]
@@ -83,7 +76,6 @@
 
 // console.log(users1[0][0])
 // // let users2:number[][][] = [[[10]]]
-
 
 // let users:Array<Array<string>> = [["shashi"]];
 
@@ -99,14 +91,10 @@
 
 // let x:(string| number | boolean)[] = ["s" , "x" , 10 , true , null]
 
-
 // // objects and tuple , functions
 
-
-
-
 // create an object
-//example of type inference with object 
+//example of type inference with object
 
 // let user = {
 //     //key:value pair
@@ -126,8 +114,8 @@
 
 // Type Annotation with object
 //username
-//email 
-//company 
+//email
+//company
 //salary
 //city
 //IsPaid
@@ -155,13 +143,11 @@
 
 // console.log(userProfile)
 
-// Object with Type Inference 
+// Object with Type Inference
 // let userwithInference={
 //     username:"shashi"
 // }
 // console.log(userwithInference);
-
-
 
 // // Object with Type Annotation
 
@@ -211,7 +197,6 @@
 //     std_available?:boolean;
 // }
 
-
 // student = {
 //     std_name:"kushal"
 // }
@@ -220,11 +205,10 @@
 
 // console.log(student)
 
-
 // create an Object inside Array
 
 // let Users: { username:string;  salary:number}[] = [
-    
+
 //     {
 //         username:"shashi",
 //         salary:10000
@@ -237,7 +221,7 @@
 //          username:"vinay",
 //         salary:20000
 //     },
-   
+
 // ];
 
 // console.log(Users)
@@ -262,21 +246,20 @@
 //             state:'karanataka',
 //             pincode:111111
 //         },
-    
+
 //         {
 //            city:'mysore',
 //             state:'karanataka',
-//             pincode:22222 
+//             pincode:22222
 //         }
 //     ]
-        
+
 //     }
 // ];
 
 // console.log(userProfile[0]?.address[0]?.city);
 
-
-// // type alias , function 
+// // type alias , function
 
 // type str = string;
 
@@ -288,7 +271,6 @@
 // console.log(MyName);
 // console.log(company);
 
-
 //Object type Aliases(Object reference way)
 
 // type USERPROFILE = {
@@ -297,7 +279,6 @@
 //     address:string;
 // }
 
-
 // let userProfile:USERPROFILE = {
 //     username:"vinay",
 //     pancard:1000000,
@@ -305,7 +286,6 @@
 // }
 
 // console.log(userProfile)
-
 
 // create one Employee Object with type Aliases
 //emp_id
@@ -316,13 +296,11 @@
 //education
 //salary
 
-
 // type SKILLS = [
 
 // ];
 // type EDUCATIONS = {}
 // type EXP = {}
-
 
 // type USER = {
 //     username:string;
@@ -330,7 +308,6 @@
 //     gender:string;
 //     IsActive?:boolean;
 //    };
-
 
 // type ADDRESS = {
 //         streetName:string,
@@ -352,7 +329,6 @@
 //     perm_address:ADDRESS
 // }
 
-
 // let emp_obj :EMPOBJ = {
 //     user:{username:'shashi',photo:"https://unsplash.com/s/photos/fake-man",gender:'male'  },
 //   temp_address:{streetName:"4th cross" , city:'mysore',pincode:11111},
@@ -362,7 +338,6 @@
 // }
 
 // console.log(emp_obj)
-
 
 // type username = string;
 // type age = number;
@@ -403,7 +378,7 @@
 //     {
 //         title:"selenium trainer",
 //         IsCompleted:true,
-       
+
 //     }
 // ];
 
@@ -413,18 +388,15 @@
 
 // i need only console or  not return data (void)
 
-
 // type CALWITHOUTRETURN = (val:string) => []; //no return value
 // type Obj= () => object;
 // type str = () => string;
-
 
 //Type Aliases
 // type USER = {
 //     username:string;
 //     age : number
 // }
-
 
 // INTERFACE
 
@@ -436,18 +408,16 @@
 // let user:USER = {
 //     username:"shashu",
 //     age:30,
-    
+
 // }
 
 // console.log(user)
-
 
 // interface does not create object
 
 //it defines only rules or structure
 
-
-// create one Emp object and share 
+// create one Emp object and share
 
 // interface UserProfile {
 //     username:string;
@@ -471,7 +441,6 @@
 // let add:ADD =(firstNumber , secondNumber)=>{
 //     return firstNumber + secondNumber
 // }
-
 
 // console.log(add(2 , 2))
 
@@ -513,7 +482,6 @@
 
 // let users:USERS = ["shashi" ]
 
-
 // type USER = {};
 // type ADDRESS = {};
 // type PAYMENT = {};
@@ -530,7 +498,7 @@
 
 // interface ADDRESS {
 //    readonly street_name:string;
-   
+
 // }
 
 // interface PAYMENT {
@@ -543,7 +511,7 @@
 // let profile:PROFILE = {
 //     username:"shashi",
 //     street_name:"jaya nagar",
-    
+
 // }
 
 // let profile2:PROFILE2 = {
@@ -553,7 +521,6 @@
 // }
 
 // console.log(profile.street_name)
-
 
 // type USER = {
 //     username:string
@@ -575,7 +542,6 @@
 //     address:object
 // }
 
-
 // let user:USER = {
 //     username:'manu',
 //     age:20,
@@ -583,7 +549,6 @@
 //         name:'jayanagar'
 //     }
 // }
-
 
 // interface ADDRESS {
 //     city:string;
@@ -595,7 +560,6 @@
 //     address:ADDRESS
 // }
 
-
 // let user:USER = {
 //     name:'dixith',
 //     address:{
@@ -605,7 +569,6 @@
 // }
 
 // console.log(user)
-
 
 //*-----------------------------TUPLE -------------------------------*/
 
@@ -618,12 +581,9 @@
 // let TupleWith10Data:[string , number , boolean , null , undefined , object ] =
 //  ["shahsi" , 100 , true , null  , undefined , {} ]
 
-
 // access tuple Values
 
 // Is Tuple is Mutable or not?
-
-
 
 // let URL:readonly [string ,  number] = ["https://api.github.com/" , 200]; //tuple always should match the order
 
@@ -634,8 +594,7 @@
 
 // //if it is readonly flag that means no updates allowed
 
-
-// nested tuple 
+// nested tuple
 
 // let Users:[string , [string , number , [boolean]]] = ["shashi"  , ["manu" , 100  , [true]]];
 
@@ -649,13 +608,12 @@
 // let Users:[string , boolean?] = ["shashi"];
 
 // NAMED TUPLE
-//Named Tuples: Since TypeScript 4.0, you can add labels to elements to 
+//Named Tuples: Since TypeScript 4.0, you can add labels to elements to
 // make your code more readable (e.g., [name: string, age: number]).
 
 // let URL:[url:string , statusCode:number ,method:string] = ["https://www.google.com"  , 200  , "GET"];
 
 // console.log(URL)
-
 
 // Tuple with Array
 
@@ -673,7 +631,6 @@
 
 // console.log(User1)
 
-
 // tuple with interface
 
 // interface PROFILE {
@@ -682,14 +639,12 @@
 
 // let user2:PROFILE = ["vinay" , "manu"]
 
-
 // interface with extends keyword with tuple
 // tuple pattern
 // interface User {
 //     0:string;
 //     1 : number
 // }
-
 
 // interface Profile extends Array<string| number> {
 //     0 :string;
@@ -709,7 +664,6 @@
 // let arr:(string| number)[] = [ 2000 , "anuWithArray"  , "shashi"]; //no fixed size , no order
 // console.log(arr)
 
-
 // //tuple is flexible in few cases like array methods
 // let tuple:[string , number] = ["anuithTuple" , 1000 ]; //fixed size order is important
 // console.log(tuple);
@@ -723,9 +677,7 @@
 // tuple.unshift(10000000);
 // console.log(tuple)
 
-// //tuple is extending array only 
-
-
+// //tuple is extending array only
 
 // let test:[string] = ["shashi"]
 
@@ -736,16 +688,14 @@
 
 // let data2:(string | number)[] = ["shashi" , 1000 , 1000];
 
-
 // let data1 = ["shashi" , 10000] as const; //force tuple
 
 // let data3:[string , number] = ["shashi" , 100000];
 
-// size is matter use tuple 
-// order is matter use tuple 
+// size is matter use tuple
+// order is matter use tuple
 
-
-// RGB 
+// RGB
 // cordinates => latitude and longitude
 
 // let RGBA:[number , number , number , number] = [255 , 255 , 255 , 0.5];
@@ -767,11 +717,9 @@
 
 // UNION type
 
-
 // let x:string; //undefined
 // x = "shashi";
 // x = 10;
-
 
 // console.log(x)
 
@@ -785,9 +733,8 @@
 // arr = [10]; //string values with array
 // arr = ["shashi"]
 
-
 //need to store multiple array of values go with tuple
-// either any one type in the value might what ever data type like , primitive or object 
+// either any one type in the value might what ever data type like , primitive or object
 // union
 
 // let x:string | number = "shashi";
@@ -803,7 +750,6 @@
 //     userProfile:USERPROFILE
 // }
 
-
 // object literal :
 // type annotation also use :
 
@@ -817,14 +763,12 @@
 //     [age]:10000
 // }
 
-
 // Unions , tuples , array , objects , type alias , interface
 
 // let x : string | number = "shashi";
 // let arr:string[] | number[] = ["shashi"];
 
 // let obj:{name:string} | {age:number} = {name:"shashi" , age:1000};
-
 
 // // union with function parameter
 
@@ -836,8 +780,6 @@
 // console.log(UserData(1000));
 // console.log(UserData(true))
 
-
-
 // try with union and tuple type
 // let data:[string|number, boolean|string] = ["suman" ,   true];
 
@@ -846,45 +788,197 @@
 // type EMPID = string | number;
 // const emp_id:EMPID = 123
 
-
 // let value:string | number = 1000;
 
 // if(typeof value === "string"){
 //  console.log(value.toUpperCase());
 
 // }else {
-//     console.log(value.toFixed(4)); //number method 
+//     console.log(value.toFixed(4)); //number method
 // }
 
-
-
 // type narrowing
-
 
 // |
 // [string , number]
 // type x ={}
 // interface {}
 
+// let x = "100";
+// let y = 100;
 
-let x = "100";
-let y = 100;
-
-if(typeof(x) == typeof(y)){
-   console.log(typeof x);
-   console.log(typeof y)
-}
-
+// if(typeof(x) == typeof(y)){
+//    console.log(typeof x);
+//    console.log(typeof y)
+// }
 
 // when ever using object , interface ,  you should avoid unions
 
-let demo = (x:string | number) =>{
-    if(typeof x === "string"){
-        console.log(x.toUpperCase())
-    }else{
-        console.log(x.toFixed(1))
-    }
-}
+// let demo = (x:string | number) =>{
+//     if(typeof x === "string"){
+//         console.log(x.toUpperCase())
+//     }else{
+//         console.log(x.toFixed(1))
+//     }
+// }
 
-let demo1 = demo("shashi"); //SHASHI
-let demo2 = demo(1000); //1000.0
+// let demo1 = demo("shashi"); //SHASHI
+// let demo2 = demo(1000); //1000.0
+
+// Type-InterSections => combine multiple types into one type that has all properties
+
+// syntax : &
+// an engineer also a singer
+
+// type PERSON = {
+//     name:string;
+//     age:number
+// };
+// type EMPLOYEE = {
+//     companyId:string;
+//     department:string
+// };
+
+// type PERSONEMP = PERSON & EMPLOYEE;
+
+// let employee:PERSONEMP = {
+//     name:"keerthi",
+//     age:30,
+//     companyId:'qsp',
+//     department:'IT',
+
+// }
+
+// console.log(employee)
+
+// intersection with interface
+
+// interface A {
+//   a: string;
+// }
+// interface B {
+//   b: string;
+// }
+
+// interface C {
+//   c: number;
+// }
+
+// type combined = A & B & C;
+// let Data: combined = {
+//   a: "hello",
+//   b: "world",
+//   c: 1000,
+// };
+
+// admin user
+
+// type adminUser = {
+//     role:string;
+//     permission:string[];
+// } & {
+//     name:string;
+//     email:string
+// }
+
+// let admin:adminUser = {
+//     role:"admin",
+//     permission:["read" , "write" , "delete"],
+//     name:"adminUser",
+//     email:"admin@admin.com"
+// }
+
+// console.log(admin)
+
+
+// LITERAL TYPE
+// string - ""
+// number - 10
+// boolean true
+// object = {}
+// array = []
+
+// let str = new String("shashi"); 
+
+// what are literal Type?
+// Literal types you allow to specify EXACT value that a type can have(custom type)
+
+// let x:"x" = "x";
+// let y:"y" = "y";
+
+// function GENID(id:"QSP-"){
+//     return id + Math.round(Math.random()); //random id
+// }
+
+// let emp1 = GENID("QSP-");
+// console.log(emp1)
+
+// let status: "success" | "error" | "loading" = "loading";
+// status = "success";
+// status = "error";
+
+// console.log(status)
+
+// try with type alias
+
+// type directions = "north" | "south" | "east" | "west";
+// let move:directions = "south";
+// console.log(`I am moving into ${move} side`)
+
+//number literal type
+// let fixedNumber :200 = 200;
+
+// type STATUSCODE = 200 | 201 | 204 | 400 | 401 | 404 | 500 | "OK";
+
+// let statusCode:STATUSCODE = 200;
+//  //success
+// console.log("SUCCESS" , statusCode)
+
+// rating system 0 to 5 //
+
+// type RATING = 0 | 1 | 2 | 3 | 4 |5;
+
+// let rating:RATING = 5;
+// console.log("My rating is " , rating)
+
+// Literal Type with Object
+// type MODE = "light" | "dark";
+// let theme:MODE = {
+//    mode:"dark"
+// }
+
+// let config:{
+//     mode:"dark" | "light"
+// } = {
+//     mode:"dark"
+// };
+
+// config.mode = "light";
+// console.log("My theme style is" , config)
+
+// multiple Literal properties
+
+// type USERROLE = "admin" | "student" | "teacher";
+// let user:{
+//     name:string;
+//     role:USERROLE,
+//     isActive:true|false
+// } = {
+//     name:"dixith",
+//     role:"student",
+//     isActive:true
+// }
+
+// console.log(user)
+
+
+// Literal with array type
+
+// RGB
+// let rgb:["red" , "green" , "blue"] = ["red"  , "green" , "blue" ];
+// console.log("RGA" , rgb);
+// rgb.forEach(color => console.log(color));
+
+const colors = ():"red" | "green" | "blue" => "blue";
+console.log(colors())
+
