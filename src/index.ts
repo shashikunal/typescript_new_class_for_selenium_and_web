@@ -890,7 +890,6 @@
 
 // console.log(admin)
 
-
 // LITERAL TYPE
 // string - ""
 // number - 10
@@ -898,7 +897,7 @@
 // object = {}
 // array = []
 
-// let str = new String("shashi"); 
+// let str = new String("shashi");
 
 // what are literal Type?
 // Literal types you allow to specify EXACT value that a type can have(custom type)
@@ -971,7 +970,6 @@
 
 // console.log(user)
 
-
 // Literal with array type
 
 // RGB
@@ -979,6 +977,287 @@
 // console.log("RGA" , rgb);
 // rgb.forEach(color => console.log(color));
 
-const colors = ():"red" | "green" | "blue" => "blue";
-console.log(colors())
+// const colors = ():"red" | "green" | "blue" => "blue";
+// console.log(colors())
 
+// Type Assertions
+
+// In type Assertion you create two ways
+// syntax : <Type>Value
+// syntax : value as type
+
+// let anyValue:any = "100";
+
+// // Example i need String type
+// // Type Assertions
+// //compile time only
+// let strValue = <string>anyValue;
+// let numVal = <number>anyValue
+
+// //string
+// console.log("data type" , typeof strValue);
+// console.log(strValue.length);
+
+// //number
+// console.log(typeof numVal);
+// console.log(numVal.toFixed(1))
+
+//WHat is Type Assertions?
+//in compile time can change the type
+
+// let any:any;
+
+// //i want convert any into string
+// let str = <string>any;
+// str = "manu"
+// console.log(str)
+
+// // i want to change any into number with help of type assertions
+
+// let num = <number>any;
+// num = 100;
+// console.log(num);
+// console.log(typeof num);
+
+// // i want to change any into boolean with help of type assertions
+
+// let bool = <boolean>any;
+// bool = true;
+// console.log(bool);
+// console.log(typeof bool)
+
+// let anyValue:any;
+// //convert any into string
+// let strValue = anyValue as string; //!SECTION
+
+// strValue = "I am string you do whatever you within strings";
+// console.log(strValue);
+// console.log(strValue.toUpperCase());
+
+// //lets try with number
+
+// let numValue = anyValue as number;
+// numValue = 1000;
+// console.log(numValue);
+// console.log(numValue.toFixed(2));
+
+// lets try convert number into string;
+// let num:number = 123;
+// console.log(num);
+// console.log(typeof num);
+
+// //convert number into string;
+// //Typescript does not allow direct conversion between unrelated type
+// //use 'unknown' //middleman
+// let str = num as unknown as string; //double assertion for unrelated type
+// str = "123";
+// console.log(str);
+// console.log(typeof str)
+
+// //convert into boolean
+// let bool = num as unknown as boolean;
+// bool = true;
+// console.log(bool);
+// console.log(typeof bool)
+
+//Javascript //run time conversions
+
+// let str = "123";
+// console.log(str);
+// console.log(typeof str);
+
+// //i want to convert string into number
+// let num = Number(str);
+// console.log(num);
+// console.log(typeof num);
+
+// //i want to convert number into string
+
+// let y = String(num);
+// console.log(y);
+// console.log(typeof y)
+
+// let btn = document.getElementById("btn") as HTMLButtonElement; //type
+// let h1 = document.getElementsByTagName("h1")[0] as HTMLHeadingElement;//type
+
+// console.log(btn);
+// console.log(h1)
+
+// interface MockButtonELement {
+//     disabled:boolean;
+//     click:()=>void;
+//     textContent:string
+// }
+
+// let btn:unknown = {
+//     disabled:false,
+//     click : () => console.log("clicked"),
+//     textContent:'Submit'
+// }
+
+// let Button = btn as MockButtonELement;
+
+// let x = document.getElementById("btn") as HTMLButtonElement
+
+// Array of Object with Type Assertions
+
+// interface Product {
+//     id:number;
+//     title:string;
+//     price:number;
+//     isStock:boolean;
+// }
+
+// let ProductsData:unknown = [
+//     {
+//        id:1,
+//        title:"laptop",
+//        price:10000,
+//        isStock:true
+//     },
+//       {
+//        id:2,
+//        title:"Mobile",
+//        price:20000,
+//        isStock:false
+//     }
+// ]
+
+// let products = ProductsData as Product[];
+
+// console.log(products[0]?.title);
+
+// let colors = ["red" , "green" , "blue"] as const;
+// colors[0] = "shashi";
+
+// ENUM
+// /Numeric enums
+//We’ll first start off with numeric enums, which are probably
+// more familiar if you’re coming from other languages.
+//  An enum can be defined using the enum keyword.
+
+// enum Directions {
+//     // 0,1 ,2,3
+//     North, //enum members first item  0
+//     South, //1 //! autoIncrement 1
+//     East, //2
+//     West, //3
+// }
+
+// let north = Directions.North;
+
+// let south = Directions.South;
+// let east = Directions.East;
+// let west = Directions.West;
+
+// console.log(north);//0
+// console.log(south);//1
+// console.log(east);//2
+// console.log(west);//3
+
+//schema values
+// enum StatusCode {
+//    informational = 100,
+//    successfull = 200,
+//    Redirection=300,
+//    clientError = 400,
+//    serverError = 500
+// }
+
+// console.log(StatusCode.informational);
+// console.log(StatusCode.successfull);
+// console.log(StatusCode.Redirection);
+// console.log(StatusCode.clientError);
+// console.log(StatusCode.serverError);
+
+// String Enum
+
+// enum ROLE {
+//   Admin = "admin", //0
+//   Editor = "editor",
+//   User = "user",
+//   Guest = "guest",
+// }
+// let admin: ROLE = ROLE.Admin;
+// let editor: ROLE = ROLE.Editor;
+// let user: ROLE = ROLE.User;
+// let guest: ROLE = ROLE.Guest;
+
+// if (admin) {
+//   console.log("Role Admin exists");
+// //   window.location.assign("/admin")
+// } else if (editor) {
+//   console.log("Editor Role exists");
+// } else if (user) {
+//   console.log("User role Exists");
+// } else if (guest) {
+//   console.log("Guest exists here");
+// } else {
+//   console.log("no more role");
+// }
+
+// enum Environments {
+//   Development = "development",
+//   Staging = "staging",
+//   Testing = "testing",
+//   Production = "production",
+// }
+
+// function ConfigApp(env: Environments): void {
+//   if (env === Environments.Development) {
+//     console.log("Server is running on local server for development");
+//   } else if (env === Environments.Testing) {
+//     console.log(
+//       "Server is running on local server for Testing and giving to staging...",
+//     );
+//   }else if(env === Environments.Staging) {
+//     console.log(
+//       "Server is running on remote server for Testing and giving to production...",
+//     );
+//   }else if(env === Environments.Production) {
+//     console.log(
+//       "Server is running on remote server for production and ready for End user",
+//     );
+//   }
+// }
+// ConfigApp(Environments.Production);
+
+// mixed enum
+
+// enum mixed {
+//     Yes = "yes",
+//     No = 1,
+//     MayBe = "may be"
+// }
+
+// console.log("Mixed YES" , mixed.Yes); //"yes"
+// console.log("NO" , mixed.No); //1
+// console.log("May be" , mixed.MayBe); //"may be"
+
+// if(mixed.Yes === "yes") {
+//     console.log("yes")
+// }
+
+// if(mixed.No === 1){
+//     console.log("no")
+// }
+
+//Reverse Mapping with numeric ENUM ONLY WORKS
+enum Directions {
+    North,
+    South ,
+    East,
+    West
+}
+
+console.log("Value 0" , Directions[0]);
+console.log("Value 1" , Directions[1]);
+
+
+enum Colors {
+    Red = "red",
+    Green = "green",
+    Blue = "blue"
+}
+//if string enum reverse mapping is not work....
+console.log("String Value" , Colors['red']);
