@@ -910,21 +910,113 @@
 //     console.log("no")
 // }
 //Reverse Mapping with numeric ENUM ONLY WORKS
-var Directions;
-(function (Directions) {
-    Directions[Directions["North"] = 0] = "North";
-    Directions[Directions["South"] = 1] = "South";
-    Directions[Directions["East"] = 2] = "East";
-    Directions[Directions["West"] = 3] = "West";
-})(Directions || (Directions = {}));
-console.log("Value 0", Directions[0]);
-console.log("Value 1", Directions[1]);
-var Colors;
-(function (Colors) {
-    Colors["Red"] = "red";
-    Colors["Green"] = "green";
-    Colors["Blue"] = "blue";
-})(Colors || (Colors = {}));
-//if string enum reverse mapping is not work....
-console.log("String Value", Colors['red']);
+// enum Directions {
+//     North,
+//     South ,
+//     East,
+//     West
+// }
+// console.log("Value 0" , Directions[0]);
+// console.log("Value 1" , Directions[1]);
+// enum Colors {
+//     Red = "red",
+//     Green = "green",
+//     Blue = "blue"
+// }
+// //if string enum reverse mapping is not work....
+// console.log("String Value" , Colors['red']);
+// Literal Type Vs enum
+// Literal Type only works string "";
+//Literals don't have reverse mapping; (in enum only numeric)
+//simple set of values
+// Functions in Typescript
+// Functions are reusable block of code that perform specific task.
+// In Typescript , we can specify
+//     Parameter types ,
+//     return type
+//     optional parameters
+//     default parameter
+//     rest parameter
+// function add(a:number , b:number):number{
+//     return a+b; //number
+// }
+// let demo1 = add(10, 10);
+// console.log(demo1)
+// example 2: Function without return(void)
+//void means this function does not return anything......
+//it performs an action(printing) but gives nothing back
+//this is useful just do something without needing to return data
+// function Demo(name:string):void {
+//     console.log(`Hello My name is ${name} welcome to typescript world`)
+// }
+// Demo("shashi")
+// function with multiple parameters...
+// function Profile(name:string , age:number , city:string):string {
+//     return `My name is ${name} and my age is ${age} i am coming from ${city}` //string
+// }
+// let user1 = Profile("vinu" , 20 , "mysore");
+// console.log(user1)
+// Arrow function in Typescript
+// Arrow functions are shorter and cleaner
+//syntax:(parameter) => expression
+// const square = (x: number): number => x * x; //number
+// console.log(square(10))
+// const divide = (a:number , b:number):number =>{
+//     if(b===0){
+//         throw new Error("cannot divide by zero!")
+//     }
+//     return a/b;
+// }
+// console.log(divide(10 ,2));
+// without parameter return something
+// let GetFullYear = ():number => new Date().getFullYear();
+// console.log(GetFullYear())
+//single parameter does not require parentheses
+// let demo = (x:number):number => x + 1;
+// console.log(demo(10));
+// Optional parameter with functions
+// let Profile = (name: string, age?: number, city?: string): string => {
+//     if(city){
+//         return `My name is ${name} age is ${age} and city is ${city}`;
+//     }
+//     return `My name is ${name} age is ${age}`
+// };
+// let user1 = Profile("keerthi"  , 20 , "mysore");
+// console.log(user1)
+// default parameter
+//default values are used when parameter is not provided
+// let Profile = (name:string , age:number = 20 , city:string ):string =>{
+//     return `My name is ${name} age is ${age} and city i am coming from ${city}`
+// }
+// let user1 = Profile("vinu" , undefined , "bangalore"); //should not give empty update with undefined
+// console.log(user1)
+// rest Parameter
+// Rest parameters allow multiple arguments to be passed as array
+// syntax of rest parameter ...Rest(rest parameter or spread operator)
+// in function rest parameter always should at the last parameter
+//In JavaScript, the arguments object is a built-in, array-like object
+//  available inside every non-arrow function. It contains the values of all 
+// arguments passed to the function, even those not explicitly declared as parameters.
+// let  Users  = ()=>{
+//     return arguments; //argument object exists in normal function only it is not available in arrow function
+// }
+// let user1 = Users("shashi" , "vinu" , "keerthi" , 100);
+// console.log(Array.from(user1).forEach(x => console.log(x)))
+// REST parameter
+//arrow function
+// let Users = (...Rest:string[]):string[]=>{
+//     return Rest; //always return array[]
+// }
+// let user1 = Users("shashi" , "vinu" , "anu" , "keerthi" , "kushal");
+// console.log(user1)
+// //normal function
+// function NormalUsers(...rest:string[]):string[]{
+// return rest
+// }
+// let user2 = NormalUsers("shashi" , "vinu" , "anu" , "keerthi" , "kushal");
+// console.log(user2)
+//A rest parameter must be last in a parameter list.
+let UserProfile = (name, age, ...languages) => ({ name, age, languages });
+let user1 = UserProfile("vinu", 30, "java", "nodejs", "python");
+console.log(user1);
 export {};
